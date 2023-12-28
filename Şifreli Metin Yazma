@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+void poseidonSifrele ( char *ptr, int key  ) 
+{
+	while( *ptr!='\0' )
+	{
+		*ptr = *ptr +key  ; 
+		ptr++; 		
+	}
+	
+}
+
+int main() 
+{
+	char metin[100]; 
+	int key =3 ; 
+	
+	printf("Sifrelenecek metni giriniz : ") ; scanf(" %[^\n]s", metin ); 
+	printf("Key : ") ; scanf("%d", &key ); 
+	
+	poseidonSifrele(metin, key);  
+	
+	printf("\nSifrelenmis Metin : %s \n", metin ) ; 
+	
+	
+	
+	return 0; 
+}
